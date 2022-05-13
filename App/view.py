@@ -37,7 +37,12 @@ operación solicitada
 def printMenu():
     print("Bienvenido")
     print("1- Cargar información en el catálogo")
-    print("2- ")
+    print("2-  5 estaciones desde donde se inician más viajes")
+    print("3- Planear paseos turísticos por la ciudad")
+    print("4- Reconocer los componentes fuertemente conectados del sistema")
+    print("5- Planear una ruta rápida")
+    print("6-Reportar rutas en un rango de fechas para los usuarios anuales")
+    
 
 catalog = None
 
@@ -51,7 +56,27 @@ while True:
         print("Cargando información de los archivos ....")
 
     elif int(inputs[0]) == 2:
+        #estaciones=controller.getcincostatciones()
         pass
+        
+    
+    elif int(inputs[0]) == 3:
+        estin=input("Nombre de la estación de inicio: ")
+        disponibilidad=input(" Disponibilidad del usuario pasa su paseo: ")
+        minparadas=input(" número mínimo de estaciones de parada para la ruta (sin incluir la estación de inicio)")
+        maxresp=input("máximo número de rutas de respuesta")
+    
+    elif int(inputs[0]) == 4:
+        #controler.getfuertementeconectado
+        pass
+
+    elif int(inputs[0]) == 5:
+        estor=input("Nombre de la estación origen: ")
+        estdest=input("Nombre de la estación destino: ")
+
+    elif int(inputs[0]) == 6:
+        datein=input("Fecha inicial de consulta (formato “MM/DD/AAAA”): ")
+        datefin=input("Fecha final de consulta (formato “MM/DD/AAAA”): ")
 
     else:
         sys.exit(0)
